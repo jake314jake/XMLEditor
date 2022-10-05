@@ -58,6 +58,7 @@ public class Editor implements ActionListener {
     private JButton extractBtn;
     private JButton ClearBtn;
     private JLabel CopyrightLab;
+    private JButton btnNewButton;
     
 	/**
 	 * Launch the application.
@@ -185,6 +186,14 @@ public class Editor implements ActionListener {
 		frame.getContentPane().add(ClearBtn);
 		frame.getContentPane().add(scrollPan);
 		frame.getContentPane().add(ResaultscrollPan);
+		
+		btnNewButton = new JButton("Clear");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ResaultArea.setText("");
+			}
+		});
+		frame.getContentPane().add(btnNewButton);
 		frame.getContentPane().add(CopyrightLab);
 	}
 
